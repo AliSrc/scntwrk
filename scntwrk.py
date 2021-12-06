@@ -15,7 +15,7 @@ platform = platform.system()
 
 # Get distro infomation
 dist = distro.name()
-
+#test
 # Check if system is Linux or MacOS
 if platform == "Linux" or platform == "linux2":
     os.system("sudo pacman -S nmap")
