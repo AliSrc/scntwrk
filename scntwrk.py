@@ -18,10 +18,12 @@ dist = distro.name()
 
 # Check if system is Linux or MacOS
 if platform == "Linux" or platform == "linux2":
+    os.system("sudo pacman -S nmap")
     os.system("clear")
     print("Your operating system is Linux " + dist)
     os.system("sudo nmap -sn " + local_ip +"/24")
 elif platform == "Darwin":
+    os.system("brew install nmap")
     os.system("clear")
     print("Your ip-address is: " + local_ip)
     print("Your operating system is MacOS " + dist)
