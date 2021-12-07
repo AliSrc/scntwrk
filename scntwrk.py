@@ -15,12 +15,12 @@ platform = platform.system()
 
 # Get distro infomation
 dist = distro.name()
-#test
+
+notFoundnmap = os.popen('which nmap').read()
+notFoundfiglet = os.popen('which figlet').read()
+
 # Check if system is Linux or MacOS
 if platform == "Linux" or platform == "linux2":
-    # Control if nmap and figlet is installed
-    notFoundnmap = os.popen('which nmap').read()
-    notFoundfiglet = os.popen('which figlet').read()
     if not notFoundnmap:
         os.system("sudo pacman -S nmap")
     if not notFoundfiglet:
@@ -30,10 +30,7 @@ if platform == "Linux" or platform == "linux2":
     print("Your operating system is Linux " + dist)
     os.system("sudo nmap -sn " + local_ip +"/24")
 elif platform == "Darwin":
-    # Control if nmap and figlet is installed
-    notFound = os.popen('which nmap').read()
-    notFoundfiglet = os.popen('which figlet').read()
-    if not notFound:
+    if not notFoundnmap:
         os.system("brew install nmap")
     if not notFoundfiglet:
         os.system("brew install figlet")
