@@ -30,7 +30,7 @@ if platform == "Linux" or platform == "linux2":
     print("Your operating system is Linux " + dist)
     os.system("sudo nmap -sn " + local_ip +"/24")
 elif platform == "Darwin":
-    # Control if nmap is installed
+    # Control if nmap and figlet is installed
     notFound = os.popen('which nmap').read()
     notFoundfiglet = os.popen('which figlet').read()
     if not notFound:
