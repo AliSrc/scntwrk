@@ -23,10 +23,8 @@ if platform == "Linux" or platform == "linux2":
     notFound = os.popen('which nmap').read()
     if not notFound:
         os.system("sudo pacman -S nmap")
-=======
     os.system("sudo pacman -S nmap")
     os.system("sudo pacman -S figlet")
->>>>>>> 121fd938591234c4924f25ae1556d7808967a304
     os.system("clear")
     os.system("figlet Scanning")
     print("Your operating system is Linux " + dist)
