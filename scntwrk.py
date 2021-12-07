@@ -18,7 +18,6 @@ dist = distro.name()
 #test
 # Check if system is Linux or MacOS
 if platform == "Linux" or platform == "linux2":
-<<<<<<< HEAD
     # Control if nmap is installed
     notFound = os.popen('which nmap').read()
     if not notFound:
