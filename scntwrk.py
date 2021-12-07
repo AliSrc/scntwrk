@@ -15,14 +15,20 @@ platform = platform.system()
 
 # Get distro infomation
 dist = distro.name()
-
+#test
 # Check if system is Linux or MacOS
 if platform == "Linux" or platform == "linux2":
+<<<<<<< HEAD
     # Control if nmap is installed
     notFound = os.popen('which nmap').read()
     if not notFound:
         os.system("sudo pacman -S nmap")
+=======
+    os.system("sudo pacman -S nmap")
+    os.system("sudo pacman -S figlet")
+>>>>>>> 121fd938591234c4924f25ae1556d7808967a304
     os.system("clear")
+    os.system("figlet Scanning")
     print("Your operating system is Linux " + dist)
     os.system("sudo nmap -sn " + local_ip +"/24")
 elif platform == "Darwin":
