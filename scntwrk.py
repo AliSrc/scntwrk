@@ -39,7 +39,7 @@ elif platform == "Darwin":
         os.system("brew install figlet")
     os.system("clear")
     os.system("figlet Scanning")
-    print("You have nmap Your ip-address is: " + local_ip)
+    print("Your ip-address is: " + local_ip)
     print("Your operating system is MacOS " + dist)
     os.system("sudo nmap -sn " + local_ip +"/24")
 
