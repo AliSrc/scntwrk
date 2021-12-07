@@ -18,12 +18,13 @@ dist = distro.name()
 #test
 # Check if system is Linux or MacOS
 if platform == "Linux" or platform == "linux2":
-    # Control if nmap is installed
-    notFound = os.popen('which nmap').read()
-    if not notFound:
+    # Control if nmap and figlet is installed
+    notFoundnmap = os.popen('which nmap').read()
+    notFoundfiglet = os.popen('which figlet').read()
+    if not notFoundnmap or not notFoundfiglet:
         os.system("sudo pacman -S nmap")
-    os.system("sudo pacman -S nmap")
-    os.system("sudo pacman -S figlet")
+        os.system("sudo pacman -S nmap")
+        os.system("sudo pacman -S figlet")
     os.system("clear")
     os.system("figlet Scanning")
     print("Your operating system is Linux " + dist)
